@@ -109,7 +109,8 @@ function Home({ cart, setCart }) {
       <div className="carousel-container bg-black">
         <h1
           style={{ textAlign: "center", color: "white", marginTop: "10px" }}
-          className="pb-10">
+          className="pb-10"
+        >
           Featured Products
         </h1>
 
@@ -195,18 +196,25 @@ function Home({ cart, setCart }) {
       <div className="bg-black text-white  mt-0 pt-0 ">
         <h1 className="text-center text-white mt-0 pt-0 ">Top Products</h1>
         <div className="px-5 ">
-        <div className="flex justify-around ">
-          <button
-            onClick={() => setCategory("All")}
-            className="bg-danger text-white mt-5 px-3 py-1" style={{border:"1px solid white"}}
-          >
-            All
-          </button>
-          <button onClick={() => setCategory("Headphones")} className="bg-danger text-white mt-5 px-3 py-1" style={{border:"1px solid white"}}>Headphones</button>
-          <button onClick={() => setCategory("Earbuds")} className="bg-danger text-white mt-5 px-3 py-1" style={{border:"1px solid white"}}>Earbuds</button>
-          <button onClick={() => setCategory("Earphones")} className="bg-danger text-white mt-5 px-3 py-1" style={{border:"1px solid white"}}>Earphones</button>
-          <button onClick={() => setCategory("Neckbands")} className="bg-danger text-white mt-5 px-3 py-1" style={{border:"1px solid white"}}>Neckbands</button>
+        {/*--------------------- buttons ----------- */}
+          <div className="flex justify-around">
+            {["All", "Headphones", "Earbuds", "Earphones", "Neckbands"].map(
+              (cat) => (
+                <button
+                  key={cat}
+                  onClick={() => setCategory(cat)}
+                  className={`mt-5 px-3 py-1  ${
+                    category === cat
+                      ? "bg-red-600 text-white border-white"
+                      : "text-white "
+                  }`}
+                >
+                  {cat}
+                </button>
+              )
+            )}
           </div>
+
           <div className="row mx-5 mt-4 px-5 py-5 gap-4">
             {filtercategories.map((item, index) => (
               <Card key={item.id} data={item} cart={cart} setCart={setCart} />
@@ -226,7 +234,6 @@ function Home({ cart, setCart }) {
                 </div>
               </div>
             </div>
-            
           </div>
         </div>
       </div>
