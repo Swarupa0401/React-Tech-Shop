@@ -47,7 +47,7 @@ function Footer(){
     </div>
     <hr></hr>
     <div className="Reserve">
-    <p>2025| All Rights Reserved @</p>
+    <p>2025| All Rights Reserved @ Swarupa</p>
     <div className="icons">
     <FaFacebookF />
     <FaTwitter />
