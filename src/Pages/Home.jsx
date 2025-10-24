@@ -195,16 +195,18 @@ function Home({ cart, setCart }) {
       <div className="bg-black text-white  mt-0 pt-0 ">
         <h1 className="text-center text-white mt-0 pt-0 ">Top Products</h1>
         <div className="px-5 ">
+        <div className="flex justify-around ">
           <button
             onClick={() => setCategory("All")}
-            className="mx-5 bg-danger text-white px-3 py-1" style={{border:"1px solid white "}}
+            className="bg-danger text-white mt-5 px-3 py-1" style={{border:"1px solid white"}}
           >
             All
           </button>
-          <button onClick={() => setCategory("Headphones")}>Headphones</button>
-          <button onClick={() => setCategory("Earbuds")}>Earbuds</button>
-          <button onClick={() => setCategory("Earphones")}>Earphones</button>
-          <button onClick={() => setCategory("Neckbands")}>Neckbands</button>
+          <button onClick={() => setCategory("Headphones")} className="bg-danger text-white mt-5 px-3 py-1" style={{border:"1px solid white"}}>Headphones</button>
+          <button onClick={() => setCategory("Earbuds")} className="bg-danger text-white mt-5 px-3 py-1" style={{border:"1px solid white"}}>Earbuds</button>
+          <button onClick={() => setCategory("Earphones")} className="bg-danger text-white mt-5 px-3 py-1" style={{border:"1px solid white"}}>Earphones</button>
+          <button onClick={() => setCategory("Neckbands")} className="bg-danger text-white mt-5 px-3 py-1" style={{border:"1px solid white"}}>Neckbands</button>
+          </div>
           <div className="row mx-5 mt-4 px-5 py-5 gap-4">
             {filtercategories.map((item, index) => (
               <Card key={item.id} data={item} cart={cart} setCart={setCart} />
@@ -224,6 +226,7 @@ function Home({ cart, setCart }) {
                 </div>
               </div>
             </div>
+            
           </div>
         </div>
       </div>
