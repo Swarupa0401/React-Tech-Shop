@@ -444,7 +444,7 @@ function Home({ cart, setCart }) {
       </div>
 
       {/* ----------------------Top Products Section----------------------- */}
-      <div className="bg-black text-white mt-0 pt-0">
+      <div className="bg-black text-white mt-0 pt-0 pb-0 mb-[-60px]">
         <h1 className="text-center text-white mt-0 pt-0">Top Products</h1>
         <div className="px-5">
           {/* Category Buttons */}

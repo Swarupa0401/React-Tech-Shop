@@ -3,9 +3,9 @@
   display: flex;
   align-items: flex-start;
   gap: 30px;
-  padding: 20px;
+  padding: 0px;
   font-family: Arial, sans-serif;
-   background: #1c1c1e;
+  background: #1c1c1e;
 }
 
 /*  Left: Cart container */
@@ -13,9 +13,9 @@
   flex: 3;
   background: #1c1c1e;
   color: white;
-  padding: 20px;
-  border-radius: 8px;
-  max-width: 800px;
+  padding: 40px;
+  /* border-radius: 8px; */
+  /* max-width: auto; */
 }
 
 /* Right: Summary container */
@@ -149,11 +149,12 @@
 }
 .empty-cart{
   text-align: center;
-  padding-top: 70px;
-  margin-left: 600px;
+  /* padding-top: 70px;
+  margin-left: 600px; */
 
 }
 .empty-cart-icon{
+  margin-left: 670px;
   font-size: 70px;
   color: red;
 }

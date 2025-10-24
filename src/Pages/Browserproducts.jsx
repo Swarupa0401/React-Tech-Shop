@@ -183,12 +183,12 @@ function Browserproducts({ cart, setCart }) {
       </div>
 
       {/* Products Grid */}
-      <div className="products-section flex-1 p-6">
+      <div className="products-section flex-1 p-6 pb-40">
         <h2 className="text-2xl font-bold mb-6">All Products</h2>
         {filteredProducts.length === 0 ? (
           <p className="text-gray-400">No products found</p>
         ) : (
-          <div className="products-grid grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          <div className="products-grid grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mb-32">
             {filteredProducts.map((item) => (
               <Card
                 key={item.id}
