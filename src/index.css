@@ -1,0 +1,58 @@
+.last{
+  background-color: black;
+  color: white;
+}
+.footer{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 0px;
+}
+.data{
+  margin-top: 25px;
+}
+.data input{
+  width: 300px;
+  padding-left: 5px;
+  background-color: black;
+  color: white;
+  font-size: 20px;
+  border: 1px solid white;
+  border-radius: 2px;
+}
+.data p{
+  font-size: 18px;
+}
+.data button{
+  margin-top: 15px;
+  background-color: red;
+  color: white;
+  font-size: 20px;
+  border-radius: 5px;
+  border: none;
+  width: 150px;
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.list h4{
+  margin-top: 15px;
+}
+.list li{
+  list-style: none;
+  padding-top: 5px;
+  font-size: 18px;
+}
+.Reserve{
+  display: flex;
+  margin-left: 72px;
+}
+.icons{
+  display: flex;
+  gap: 50px;
+  position: absolute;
+  right: 100px;
+  font-size: 20px;
+}
