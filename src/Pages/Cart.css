@@ -10,23 +10,22 @@
 
 /*  Left: Cart container */
 .cart-container {
-  flex: 3;
+  flex: 2;
   background: #1c1c1e;
   color: white;
   padding: 40px;
   /* border-radius: 8px; */
-  /* max-width: auto; */
+  width: 250px;
 }
 
 /* Right: Summary container */
 .summary-section {
-  flex: 1;
+  flex: 1.5;
   background: #1c1c1e;
   padding-top: 50px;
   border-radius: 8px;
   color: white;
   height: fit-content;
-
 }
 
 /* Cart items inside */
@@ -134,25 +133,37 @@
 .checkout-button:hover {
   background-color: #ff4d4d;
 }
-.order-summary p strong {
-  color: #00ff66;
- 
-}
+
+/* Order summary tweaks */
 .order-summary p {
   display: flex;
-  justify-content: space-between;
+  margin: 6px 0;
+    gap: 380px;
+  /* Added horizontal space between label and value */
 }
+
+
 .order-summary h3 {
   display: flex;
-  justify-content: space-between;
   font-size: 18px;
+  margin: 10px 0 6px 0; /* adjusted spacing */
+  gap: 400px; /* horizontal space between label and value */
 }
+
+.order-summary p strong,
+.order-summary h3 strong {
+  color: #00ff66;
+
+  /* margin-left: auto; */ /* removed to keep subtle spacing */
+}
+
+/* Empty cart */
 .empty-cart{
   text-align: center;
   /* padding-top: 70px;
   margin-left: 600px; */
-
 }
+
 .empty-cart-icon{
   margin-left: 670px;
   font-size: 70px;

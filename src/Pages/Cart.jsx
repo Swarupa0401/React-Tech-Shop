@@ -92,10 +92,10 @@ function Cart({ cart: initialCart }) {
           <div className="order-summary">
             <h2>Order Summary ({cart.length} items)</h2>
             <p>Original Price: <span>₹{originalPrice.toLocaleString()}</span></p>
-            <p className="discount">
+            <p className="discount" style={{gap:"410px"}}>
               Discount: <strong>-₹{discount.toLocaleString()}</strong>
             </p>
-            <p>
+            <p  className="discount" style={{gap:"420px"}}>
               Delivery: <strong>Free</strong>
             </p>
             <hr />

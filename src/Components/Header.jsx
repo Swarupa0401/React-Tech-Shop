@@ -17,7 +17,7 @@ function Header({cart=[]}){
       <li className="header-icons"><CiSearch /></li>
       <Link to={"/cart"}><li className="header-icons" style={{ position: "relative", color: "white" }}>
         <FaShoppingCart />
-        {/* {totalCount > 0 && (
+        {totalCount > 0 && (
           <span style={{
             position: "absolute",
             top: "-8px",
@@ -31,7 +31,7 @@ function Header({cart=[]}){
             fontSize: "0.8rem"
           }}>
             {totalCount}</span>
-        )} */}
+        )}
         </li>
       
        </Link>

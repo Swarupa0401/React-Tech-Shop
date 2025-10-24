@@ -1,8 +1,6 @@
-import React from "react";
 import firsts from "../assets/products/jbl660nc-1.png"
-import Third from "../assets/products/boat131-3.png"
+import Third from "../assets/products/boat131-1.png"
 import thirteens from "../assets/products/jbl760nc-1.png"
-
 
 export const SliderData = [
   {
