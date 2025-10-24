@@ -108,9 +108,8 @@ function Home({ cart, setCart }) {
       {/* -----------------Featured products-------------- */}
       <div className="carousel-container bg-black">
         <h1
-          style={{ textAlign: "center", color: "white", marginTop: "100px" }}
-          className="pb-20"
-        >
+          style={{ textAlign: "center", color: "white", marginTop: "10px" }}
+          className="pb-10">
           Featured Products
         </h1>
 
@@ -193,12 +192,12 @@ function Home({ cart, setCart }) {
       </div>
 
       {/* // ----------------------top products----------------- */}
-      <div className="bg-black mt-5">
-        <h1 className="text-center text-white pt-5">Top Products</h1>
-        <div className="pt-5 px-5 ">
+      <div className="bg-black text-white  mt-0 pt-0 ">
+        <h1 className="text-center text-white mt-0 pt-0 ">Top Products</h1>
+        <div className="px-5 ">
           <button
             onClick={() => setCategory("All")}
-            className="mx-5  px-3 py-1"
+            className="mx-5 bg-danger text-white px-3 py-1" style={{border:"1px solid white "}}
           >
             All
           </button>

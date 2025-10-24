@@ -21,7 +21,7 @@
 .carousel-wrapper {
     position: relative;
     overflow: visible; /* ensure background text is visible */
-    padding-bottom: 60px; /* space for dots */
+    padding-bottom: 60px;
 }
 
 /* Slick dots positioning */
