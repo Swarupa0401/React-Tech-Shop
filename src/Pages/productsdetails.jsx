@@ -225,7 +225,7 @@ const ProductDetails = () => {
         </div>
       </div>
 
-      {/* Related Products */}
+ 
       <div className="container-fluid bg-dark pb-5">
         <h3 className="text-center text-white p-4">Related Products</h3>
         <div className="container">
