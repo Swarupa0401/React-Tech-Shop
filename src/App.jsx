@@ -3,7 +3,6 @@ import { useState } from "react";
 import Header from "./Components/Header";
 import Footer from "./Components/Footer";
 import "./index.css";
-// import Featuredproducts from "./Pages/Featuredproducts";
 import Navigation from "./routing/Navigation";
 import Ouradvantages from "./Pages/Ouradvantages";
 function App(){
@@ -13,7 +12,6 @@ function App(){
     <>
       <Header cart={cart} />
     
-    {/* <Featuredproducts/> */}
    
    
     <Navigation cart={cart} setCart={setCart} />

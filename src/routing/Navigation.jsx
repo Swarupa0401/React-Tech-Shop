@@ -5,7 +5,6 @@ import Home from "../Pages/Home";
 import Browserproducts from "../Pages/Browserproducts";
 import Productdetails from "../Pages/productsdetails";
 
-// import Header from "../Components/Header";
 function Navigation({ cart, setCart }){
   return(
     <>
