@@ -36,7 +36,7 @@ function Home({ cart, setCart }) {
   const trackRef = useRef(null);
   const [current, setCurrent] = useState(0);
 
-  // Carousel auto-scroll logic
+
   useEffect(() => {
     const track = trackRef.current;
     let items = Array.from(track.children);
@@ -97,7 +97,7 @@ function Home({ cart, setCart }) {
                 </Link>
               </div>
 
-              {/* RIGHT IMAGE BLOCK */}
+              
               <div className="flex md:w-[45%] w-full justify-end ml-auto -mr-8">
                 <img
                   src={item.images}
@@ -110,7 +110,7 @@ function Home({ cart, setCart }) {
         ))}
       </Slider>
 
-      {/* -----------------Featured Products----------------------- */}
+   
       <div className="carousel-container bg-black">
         <h1
           style={{ textAlign: "center", color: "white", marginTop: "10px" }}
@@ -222,25 +222,24 @@ function Home({ cart, setCart }) {
 
           {/* Product Cards */}
           <div className="row mx-5 mt-4 px-5 py-5 gap-4">
-  {filtercategories.map((item) => (
-    <Card key={item.id} data={item} cart={cart} setCart={setCart} />
-  ))}
+            {filtercategories.map((item) => (
+              <Card key={item.id} data={item} cart={cart} setCart={setCart} />
+            ))}
 
-  {/* Browse All Card */}
-  <div className="col-lg-3 col-md-3 col-12 mb-4">
-    <div className="card h-100 bg-dark border border-white d-flex align-items-center justify-content-center text-center">
-      <div className="card-body card_font_s d-flex flex-column align-items-center justify-content-center">
-        <Link to="/Allproduct"  style={{ textDecoration: 'none' }}>
-          <h2 className="card-title text-white ">
-            Browse all <br /> Product &#10140;
-            <i className="fa-solid fa-arrow-right-long bgggg"></i>
-          </h2>
-        </Link>
-      </div>
-    </div>
-  </div>
-</div>
-
+            {/* Browse All Card */}
+            <div className="col-lg-3 col-md-3 col-12 mb-4">
+              <div className="card h-100 bg-dark border border-white d-flex align-items-center justify-content-center text-center">
+                <div className="card-body card_font_s d-flex flex-column align-items-center justify-content-center">
+                  <Link to="/Allproduct" style={{ textDecoration: "none" }}>
+                    <h2 className="card-title text-white ">
+                      Browse all <br /> Product &#10140;
+                      <i className="fa-solid fa-arrow-right-long bgggg"></i>
+                    </h2>
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -248,4 +247,3 @@ function Home({ cart, setCart }) {
 }
 
 export default Home;
-
