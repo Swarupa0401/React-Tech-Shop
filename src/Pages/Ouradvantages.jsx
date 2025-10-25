@@ -27,7 +27,7 @@ function Ouradvantages(){
   return(
     <>
       
-      <div style={{ backgroundColor: "gray", color: "#fff", padding: "70px 0" }}>
+      <div style={{ backgroundColor: "gray" }} className="py-[70px] px-0 text-white">
         <div className="container text-center">
           <h2 className="mb-5" style={{ fontWeight: "bold" }}>
             Our Advantages
