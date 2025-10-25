@@ -36,7 +36,7 @@ function Home({ cart, setCart }) {
   const trackRef = useRef(null);
   const [current, setCurrent] = useState(0);
 
-
+  // Carousel auto-scroll logic
   useEffect(() => {
     const track = trackRef.current;
     let items = Array.from(track.children);
@@ -97,7 +97,7 @@ function Home({ cart, setCart }) {
                 </Link>
               </div>
 
-              
+              {/* RIGHT IMAGE BLOCK */}
               <div className="flex md:w-[45%] w-full justify-end ml-auto -mr-8">
                 <img
                   src={item.images}
@@ -110,7 +110,7 @@ function Home({ cart, setCart }) {
         ))}
       </Slider>
 
-   
+      {/* -----------------Featured Products----------------------- */}
       <div className="carousel-container bg-black">
         <h1
           style={{ textAlign: "center", color: "white", marginTop: "10px" }}
