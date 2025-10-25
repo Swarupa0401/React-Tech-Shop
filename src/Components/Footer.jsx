@@ -6,7 +6,7 @@ import { FaFacebookF,FaTwitter,FaInstagram,FaLinkedinIn  } from "react-icons/fa"
 function Footer(){
   return(
     <>
-    <div className="last">
+    <div className="bg-black text-white">
     <div className="footer">
     <div className="data">
       <h2>Tech-Shop</h2>
