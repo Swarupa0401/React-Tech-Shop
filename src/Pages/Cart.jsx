@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import { FaTrash} from "react-icons/fa";
-import { BsCartX  } from "react-icons/bs";
-import {useNavigate} from "react-router-dom"
+import { FaTrash } from "react-icons/fa";
+import { BsCartX } from "react-icons/bs";
+import { useNavigate } from "react-router-dom";
 import "./Cart.css";
 
 function Cart({ cart: initialCart }) {
   const [cart, setCart] = useState(initialCart);
-  const navigate=useNavigate();
+  const navigate = useNavigate();
 
   const increaseQuantity = (id) => {
     const updatedCart = cart.map((item) =>
@@ -43,16 +43,28 @@ function Cart({ cart: initialCart }) {
     <div className="cart-page">
       {/* 🛒 CART SECTION */}
       <div className="cart-container">
-        {/* <h1>Tech-Shop Cart</h1> */}
-
         {cart.length === 0 ? (
           <div className="empty-cart">
             <BsCartX className="empty-cart-icon" />
             <p>Your Cart is Empty</p>
-            <button className="start-shopping-button" onClick={()=>navigate("/")}>Start Shopping</button>
+            <button
+              className="start-shopping-button"
+              onClick={() => navigate("/")}
+            >
+              Start Shopping
+            </button>
           </div>
         ) : (
-          <div className="cart-items-section">
+          // 🧭 Added inline scroll styles for vertical slider
+          <div
+            className="cart-items-section"
+            style={{
+              maxHeight: "500px", // adjust height as needed
+              overflowY: "auto",
+              overflowX: "hidden",
+              paddingRight: "10px",
+            }}
+          >
             {cart.map((item) => (
               <div key={item.id} className="cart-item">
                 <img
@@ -71,7 +83,9 @@ function Cart({ cart: initialCart }) {
                   </button>
                   <div className="price-details">
                     <span className="final-price">₹{item.finalPrice}</span>
-                    <span className="original-price">₹{item.originalPrice}</span>
+                    <span className="original-price">
+                      ₹{item.originalPrice}
+                    </span>
                   </div>
                   <div className="quantity-control">
                     <button onClick={() => decreaseQuantity(item.id)}>-</button>
@@ -86,20 +100,24 @@ function Cart({ cart: initialCart }) {
         )}
       </div>
 
-      {/* 🧾 ORDER SUMMARY SECTION (completely separate) */}
+      {/* 🧾 ORDER SUMMARY SECTION */}
       {cart.length > 0 && (
         <div className="summary-section">
           <div className="order-summary">
             <h2>Order Summary ({cart.length} items)</h2>
-            <p>Original Price: <span>₹{originalPrice.toLocaleString()}</span></p>
-            <p className="discount" style={{gap:"410px"}}>
+            <p>
+              Original Price: <span>₹{originalPrice.toLocaleString()}</span>
+            </p>
+            <p className="discount" style={{ gap: "410px" }}>
               Discount: <strong>-₹{discount.toLocaleString()}</strong>
             </p>
-            <p  className="discount" style={{gap:"420px"}}>
+            <p className="discount" style={{ gap: "420px" }}>
               Delivery: <strong>Free</strong>
             </p>
             <hr />
-            <h3>Total Price:   <strong> ₹{finalPrice.toLocaleString()}</strong></h3>
+            <h3>
+              Total Price: <strong>₹{finalPrice.toLocaleString()}</strong>
+            </h3>
             <button className="checkout-button">Checkout</button>
           </div>
         </div>

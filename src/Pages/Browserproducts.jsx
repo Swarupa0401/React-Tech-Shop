@@ -137,6 +137,7 @@ function Browserproducts({ cart, setCart }) {
         <div className="filter-section space-y-4">
           <div>
             <p className="font-semibold mb-1">Brands</p>
+            <div className="flex flex-col gap-1">
             {["JBL", "boAt", "Sony"].map((brand) => (
               <label key={brand} className="block cursor-pointer">
                 <input
@@ -148,10 +149,12 @@ function Browserproducts({ cart, setCart }) {
                 {brand}
               </label>
             ))}
+            </div>
           </div>
 
           <div>
             <p className="font-semibold mb-1">Category</p>
+            <div className="flex flex-col gap-1">
             {["Headphones", "Earbuds", "Wired"].map((cat) => (
               <label key={cat} className="block cursor-pointer">
                 <input
@@ -163,6 +166,7 @@ function Browserproducts({ cart, setCart }) {
                 {cat}
               </label>
             ))}
+            </div>
           </div>
 
           <div>
@@ -177,6 +181,15 @@ function Browserproducts({ cart, setCart }) {
               value={priceRange}
               onChange={(e) => setPriceRange(Number(e.target.value))}
               className="w-full"
+        style={{
+      WebkitAppearance: "none",
+      width: "100%",
+      height: "6px",
+      borderRadius: "3px",
+      outline: "none",
+      background: `linear-gradient(to right, #ff0000 0%, #ff0000 ${(priceRange / 20000) * 100}%, #ffffff ${(priceRange / 20000) * 100}%, #ffffff 100%)`,
+    }}
+              
             />
           </div>
         </div>

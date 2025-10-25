@@ -11,7 +11,8 @@ function App(){
    console.log()
   return(
     <>
-    <Header/>
+      <Header cart={cart} />
+    
     {/* <Featuredproducts/> */}
    
    
